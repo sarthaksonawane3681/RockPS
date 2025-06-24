@@ -25,6 +25,7 @@
                 let playerselector1='';
                 
             function Gamepay(playerselector){
+                MoveComp = functions();
                 playerselector1=playerselector;
                     MoveComp=functions();
                 if(playerselector==='Rock'){
