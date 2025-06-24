@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RockPaperscissor</title>
+    <link rel="stylesheet" href="rockpaperscissor.css">
+</head>
+<body>
+    
+    <div class="main">
+        <audio class="Music" loop src="image/openingRPS.mp3"   ></audio>
+        <div id="game">
+            <div class="info">  
+                <h2 class="Gheading">Rock paper Scissor Game</h2>
+            </div>
+            <div class="GameViewStart">
+                    <button  onclick="
+                            Gamepay(document.querySelector('.Rock').innerText);
+                            clicksound();
+                            ">
+                        <audio class="butn" autoplay >
+                            
+                        </audio>
+                        <img class="imgs" src="./image/Rock.png" alt="">
+                        <h3 class="Rock">
+                            Rock</h3>
+                    </button>
+
+                    <button class="butn" onclick="
+                            Gamepay('Paper');
+                            clicksound();
+
+                    ">
+                    <audio class="butn" autoplay>
+                    </audio>
+                    <img class="imgs" src="./image/Paper.png" alt="">
+                        <h3>Paper</h3>
+                    </button>
+
+                    <button class="butn" onclick = "
+                    Gamepay('Scissor');
+                    clicksound();
+                        
+                    ">
+                        <audio class="butn"></audio>
+                        <img class="imgs" src="./image/Scissor.png" alt="">
+                        <h3>Scissor</h3>
+                    </button>
+
+                    <h4 class="choosen">Choose Your Move</h4>
+                    <p class="js-score-display"> </p>
+                
+                    <button class="restart" onclick="
+                    obj.Total_Matches=0;
+                    obj.losses=0;
+                    obj.win=0;
+                    obj.tie=0;
+                    localStorage.removeItem('Score');
+                    scoredisplay();
+                    moveselectoring();
+                    Gameover();
+                    alert(` Game Restart==> Win: ${obj.win}   Losses: ${obj.losses}   Tie: ${obj.tie}   Total Matches: ${obj.Total_Matches}`)
+                    ">
+                    <audio class="Gameover" autoplay> </audio>
+                      Reset
+                    </button>
+                    <br>
+                    <button class="mute" onclick="musicMute()">OFF-Sound</button>
+            </div>
+        </div>
+    </div>
+
+
+        <!-- //----------------Adding Script -->
+        <script src="rockpaperScissor.js"></script>
+</body>
+</html>
